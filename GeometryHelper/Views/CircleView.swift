@@ -10,15 +10,23 @@ import SwiftUI
 struct CircleView: View {
     
     // Mark: Stored properties
-    @State var radius = 10.0
+    @State var currentCircle = Circle(radius: 10.0)
     
     // Mark: Computed properties
     var body: some View {
         VStack{
-            Text("\(radius)")
+            
+            Slider(value: $currentCircle.radius, in: 0...100)
+            Text("\(currentCircle.radius)")
+                .font(.largeTitle)
+            Text("\(currentCircle.diameter)")
+                .font(.largeTitle)
+            Text("\(currentCircle.perimeter)")
                 .font(.largeTitle)
             
-            Slider(value: $radius, in: 0...100)
+            Text("\(currentCircle.area)")
+                .font(.largeTitle)
+            
         }
         .padding()
     }
