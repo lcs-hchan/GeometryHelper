@@ -17,11 +17,11 @@ struct Circle {
     }
     
     var perimeter: Double{
-        return 2 * Double.pi * radius
+        return 2 * 3.14 * radius
     }
 
     var area: Double {
-        return Double.pi * radius * radius
+        return 3.14 * radius * radius
     }
 }
 var someCircle = Circle(radius: 10.0)

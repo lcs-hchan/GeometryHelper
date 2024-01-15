@@ -15,6 +15,11 @@ struct CircleView: View {
     // Mark: Computed properties
     var body: some View {
         VStack{
+            HStack{
+                Text("Circle")
+                    .font(.largeTitle)
+                Spacer()
+            }
             HStack {
                 Spacer()
                 Image("Image 1")
@@ -24,27 +29,19 @@ struct CircleView: View {
             }
             HStack{
                 Text("0")
-                Slider(value: $currentCircle.radius, in: 0...100)
+                Slider (value: $currentCircle.radius, in: 0...100, step:1)
                 Text("100")
             }
             
             
                 List_item(title: "Radius", subtitle: "\(currentCircle.radius)")
-                .padding()
-                
+              
                 List_item(title: "Diameter", subtitle: "\(currentCircle.diameter)")
-                .padding()
                 
                 List_item(title: "Perimeter", subtitle: "\(currentCircle.perimeter)")
-                .padding()
+            
                 List_item(title: "Area", subtitle: "\(currentCircle.area)")
-                .padding()
-            
-           
-           
-            
         
-            
         }
         .padding()
     }

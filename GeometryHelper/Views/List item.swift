@@ -9,6 +9,7 @@ import SwiftUI
 
 struct List_item: View {
     let title: String
+    
     let subtitle: String
     var body: some View {
         VStack{
@@ -22,6 +23,7 @@ struct List_item: View {
                 Spacer()
             }
         }
+        .padding()
     }
 }
 
