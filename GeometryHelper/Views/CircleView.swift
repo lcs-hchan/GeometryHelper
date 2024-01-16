@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CircleView: View {
+   
     
     // Mark: Stored properties
     @State var currentCircle = Circle(radius: 10.0)
@@ -29,7 +30,7 @@ struct CircleView: View {
             }
             HStack{
                 Text("0")
-                Slider (value: $currentCircle.radius, in: 0...100, step:1)
+                Slider (value: $currentCircle.radius, in: 0...100,step: 1)
                 Text("100")
             }
             
